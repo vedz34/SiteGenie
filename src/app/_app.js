@@ -1,13 +1,12 @@
-import Footer from "./components/footer";
-import Landing from "./components/landing";
 import Navbar from "./components/navbar";
 import "./style/globals.css";
 
-export default function Home() {
+import Footer from "./components/footer";
+export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <Landing />
+      <Component {...pageProps} />
       <Footer />
     </>
   );
