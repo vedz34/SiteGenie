@@ -15,8 +15,10 @@ const AuthUI = () => {
   useEffect(() => {
     const checkSession = async () => {
       const { data } = await supabase.auth.getSession();
-      if (data.session) {
+      if (data && data.session) {
         router.push("/menu");
+      } else {
+        router.push("/register");
       }
     };
     checkSession();
@@ -26,7 +28,7 @@ const AuthUI = () => {
     if (event == "SIGNED_IN") {
       router.push("/menu");
     } else {
-      router.push("/");
+      router.push("/register");
     }
   });
 

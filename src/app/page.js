@@ -1,18 +1,23 @@
 import "./style/globals.css";
-import FAQ_E from "./components/faqs";
-import CTA from "./components/cta-section";
-import Footer from "./components/footer";
-import Navbar from "./components/navbar";
 import HeroSection from "./components/heroSection";
+import CTA from "./components/cta-section";
+import FaqSection from "./components/faqs";
+import FooterSection from "./components/footer";
+import FeaturesSection from "./components/features";
+import PricingSection from "./components/pricing";
+//import Icon from "./components/svgSection";
+import LogoCloud from "./components/logoClouds";
 
-export default function Example() {
+export default function MainPage() {
   return (
-    <div className="relative mx-5">
-      <Navbar />
+    <>
       <HeroSection />
-      <FAQ_E />
+      <LogoCloud />
+      <FeaturesSection />
+      <PricingSection />
+      <FaqSection />
       <CTA />
-      <Footer />
-    </div>
+      <FooterSection />
+    </>
   );
 }
